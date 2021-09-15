@@ -1,15 +1,14 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
-    </ion-buttons>
+    <ion-title>
+      Duoc QR
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content [fullscreen]="true">
   <div class="titulo"> Bienvenido al sistema de control de asistencia. <br>
-    Porfavor introduzca sus creedenciales de Estudiante DuocUC
+    Porfavor introduzca sus creedenciales de Docente DuocUC
   </div>
   <div class="contenido">
     <form [formGroup]="persona" (ngSubmit)="grabar()">
@@ -21,7 +20,8 @@
         <ion-label position="floating">Contraseña</ion-label>
         <ion-input formControlName="elContraseña"></ion-input>
       </ion-item><br>
-      <ion-button color="primary" routerLink="/estu">Iniciar Sesion</ion-button>
+      <ion-button color="primary" routerLink="/docen">Iniciar Sesion</ion-button> <br>
+      <ion-button color="danger" routerLink="/home">Volver</ion-button>
     </form>
   </div>
 </ion-content>

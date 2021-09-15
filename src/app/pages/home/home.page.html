@@ -7,39 +7,16 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
   <div class="titulo"> Bienvenido al sistema de control de asistencia. <br>
-          Porfavor introduzca sus creedenciales DuocUC
-</div>
-  <!-- etiqueta flotante -->
-
+    Porfavor seleccione el tipo de usuario.
+  </div>
   <div class="contenido">
-    <form [formGroup]="persona"(ngSubmit)="grabar()">
-      <ion-item>
-        <ion-label position="floating">Usuario o Correo</ion-label>
-        <ion-input formControlName="elUsuario"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Contraseña</ion-label>
-        <ion-input formControlName="elContraseña"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label>Tipo Usuario</ion-label>
-        <ion-select placeholder="Seleccione una alternativa">
-          <ion-select-option value="E">Estudiante</ion-select-option>
-          <ion-select-option value="D">Docente</ion-select-option>
-        </ion-select>
-      </ion-item>
-      <ion-button color="primary"routerLink="/login">Iniciar Sesion</ion-button> <br>
-      <ion-button color="danger" (click)="cerrar()">Cerrar</ion-button>
-      
+    <form [formGroup]="persona" (ngSubmit)="grabar()">
+      <ion-label>Iniciar Sesion <br>Estudiante</ion-label><br>
+      <ion-button color="primary" routerLink="/login">ESTUDIANTE</ion-button> <br>
+      <ion-label>Iniciar Sesion <br>Docente</ion-label><br>
+      <ion-button color="danger" routerLink="/login-doc">DOCENTE</ion-button>
     </form>
   </div>
-
-  
 </ion-content>
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>DuocUC</ion-title>
-  </ion-toolbar>
-</ion-footer>
+
