@@ -27,6 +27,14 @@ const routes: Routes = [
     path: 'login-doc',
     loadChildren: () => import('./pages/login-doc/login-doc.module').then( m => m.LoginDOCPageModule)
   },
+  {
+    path: 'scan',
+    loadChildren: () => import('./pages/scan/scan.module').then( m => m.ScanPageModule)
+  },
+  {
+    path: 'crear-qr',
+    loadChildren: () => import('./pages/crear-qr/crear-qr.module').then( m => m.CrearQrPageModule)
+  },
 ];
 
 @NgModule({
