@@ -14,15 +14,15 @@ const routes : Routes=[{
   children: [
     {
       path: 'home',
-      loadChildren: () => import('../../pages/home/home.module').then( m => m.HomePageModule)
+      loadChildren: () => import('../home/home.module').then( m => m.HomePageModule)
     },
     {
       path: 'login',
-      loadChildren: () => import('../../pages/login/login.module').then( m => m.LoginPageModule)
+      loadChildren: () => import('../login/login.module').then( m => m.LoginPageModule)
     },
     {
       path: 'login-doc',
-      loadChildren: () => import('../../pages/login-doc/login-doc.module').then( m => m.LoginDOCPageModule)
+      loadChildren: () => import('../login-doc/login-doc.module').then( m => m.LoginDOCPageModule)
     },
   ]
 }]
@@ -32,7 +32,7 @@ const routes : Routes=[{
     FormsModule,
     IonicModule,
     ReactiveFormsModule,
-    RouterModule,
+    RouterModule.forChild(routes),
     LoginPageRoutingModule
   ],
   declarations: [LoginPage]
