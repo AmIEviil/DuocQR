@@ -12,10 +12,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
-  },
-  {
     path: 'estu',
     loadChildren: () => import('./pages/estu/estu.module').then( m => m.EstuPageModule)
   },
@@ -23,6 +19,11 @@ const routes: Routes = [
     path: 'docen',
     loadChildren: () => import('./pages/docen/docen.module').then( m => m.DocenPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+ 
   {
     path: 'login-doc',
     loadChildren: () => import('./pages/login-doc/login-doc.module').then( m => m.LoginDOCPageModule)

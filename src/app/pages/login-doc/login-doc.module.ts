@@ -21,10 +21,7 @@ const routes : Routes=[{
       path: 'login',
       loadChildren: () => import('../login/login.module').then( m => m.LoginPageModule)
     },
-    {
-      path: 'login-doc',
-      loadChildren: () => import('../login-doc/login-doc.module').then( m => m.LoginDOCPageModule)
-    },
+    
   ]
 }]
 @NgModule({
@@ -34,7 +31,7 @@ const routes : Routes=[{
     IonicModule,
     LoginDOCPageRoutingModule,
     ReactiveFormsModule,
-    RouterModule.forChild(routes),
+    //RouterModule.forChild(routes),
   ],
   declarations: [LoginDOCPage]
 })

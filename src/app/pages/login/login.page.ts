@@ -13,7 +13,7 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  async presentAlert() {
+ /*async presentAlert() {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Alert',
@@ -26,5 +26,5 @@ export class LoginPage implements OnInit {
 
     const { role } = await alert.onDidDismiss();
     console.log('onDidDismiss resolved with role', role);
-  }
+  }*/
 }

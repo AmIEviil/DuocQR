@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="code-qr" >
 <ion-card *ngIf="qrData">
   <ngx-qrcode [elementType]='elementType' [value]='qrData'></ngx-qrcode>
   <ion-input type="text" placeholder="Ingrese Direccion"[(ngModel)]="qrData"></ion-input>

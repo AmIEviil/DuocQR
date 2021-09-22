@@ -9,7 +9,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 
 import { Routes,RouterModule } from '@angular/router';
-const routes : Routes=[{
+/*const routes : Routes=[{
   path: '',
   component:HomePage,
   children: [
@@ -22,14 +22,14 @@ const routes : Routes=[{
       loadChildren: () => import('../../pages/login-doc/login-doc.module').then( m => m.LoginDOCPageModule)
     },
   ]
-}]
+}]*/
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     ReactiveFormsModule,
-    RouterModule,
+    //RouterModule.forChild(routes),
     HomePageRoutingModule
   ],
   declarations: [HomePage]
